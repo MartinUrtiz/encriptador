@@ -1,0 +1,267 @@
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+html, body{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.fondo{
+    background: rgb(1, 5, 58);
+}
+
+/* CSS del Header */
+.header{
+    background: rgb(0, 0, 0);
+    box-shadow: inset 1px 2px 20px rgba(28, 4, 252, 0.336);
+    padding: 1em;
+}
+
+.titulo-principal{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1.3em;
+    left: 500px;
+    right: 500px;
+    text-decoration: none;
+    cursor:default;
+}
+
+.logo{
+    width: 5em;
+    margin-left: 50px;
+}
+
+.logo-alura{
+    position: absolute;
+    top: 1.2em;
+    left: 90%;
+    width: 5em;
+}
+
+
+/* CSS del Main */
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+/* CSS TEXTAREA */
+.textarea{
+    text-transform: lowercase;
+    text-underline-position: auto;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 15px;
+    text-align: center;
+    resize: none;
+}
+
+.textarea-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.textarea-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.cuadrotexto{
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    height: 20rem;
+    width: 30rem;
+}
+
+
+
+.mensaje{
+    background: white;
+    background-image: url(../img/Diseño\ sin\ título.png);
+    background-size: 300px;
+    background-position: 120px;
+    background-repeat: no-repeat;
+}
+
+
+.informacion{
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+/* Estilo Boton */
+.botones{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 3rem
+}
+.boton{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15rem;
+	height: 60px;
+	background: #ffffff;
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;  
+}
+
+.btn-desencriptar{
+    margin-left: 1rem;
+}
+
+.btn-copiar{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.boton .icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: -30px;
+	transition: .3s ease-in-out all;
+}
+
+.boton svg {
+	color: #000000;
+	width: 35px;
+	height: 25px;
+}
+
+.boton:hover {
+	background: #96c5fa;
+}
+
+.boton:hover .icono {
+	left: calc(100% - 40px);
+	opacity: 1;
+}
+
+.boton:hover span {
+	left: 10px;
+}
+
+
+
+/* Pie de Pagina */
+footer{
+    text-align: center;
+}
+
+.texto-pie{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.onePag{
+    color: #d48105;
+    text-decoration: none;
+}
+
+.redes{
+    padding: 10px;
+    font-size: 40px;
+    border: none;
+}
+
+.linkedin, .github{
+    margin-left: 10px;
+    transition: .3s;
+    color: #FFFFFF;
+}
+
+
+.linkedin:hover, .github:hover{
+    font-size: 42px;
+}
+
+.linkedin:hover{
+    color:#0077B5 ;
+}
+
+.github:hover{
+    color: #5f7f7a;
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 1.5em;
+        left: 10%;
+        right: 10%;
+    }
+
+    .logo, .logo-alura, .icono{
+        visibility: hidden;
+    }
+
+    .centrar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textarea-izquierda, .textarea-derecha {
+        margin: 1rem 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuadrotexto {
+        width: 80%;
+    }
+    
+    .informacion{
+        margin-left: 1rem;
+    }
+
+    button.btn-encriptar{
+        margin-right: 0.3rem;
+    }
+
+    .btn-desencriptar{
+        margin-left: 1rem;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 10rem;
+        margin: 0.5rem 0;
+    }
+
+    .mensaje {
+        background-position: center;
+        background-size: 200px;
+    }
+}

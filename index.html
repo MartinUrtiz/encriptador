@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <title>Encriptador</title>
+</head>
+<body class="fondo">
+    
+    <header>
+        <div class="header">
+            <h1><a class="titulo-principal">EnᏨᚱi₱taƊo℟ </a></h1>
+            <img class="logo" src="img/Logo.png" alt="Logo del Encriptador">
+            <a href="https://www.aluracursos.com/" target="_blank" ><img class="logo-alura" src="img/Vector-Alura.png" alt="Logo Alura"></a>
+        </div>
+    </header>
+
+    <main> 
+
+        <div class="centrar">
+        <section class="textarea-izquierda">
+            <textarea class="text-area cuadrotexto textarea" placeholder="Ingrese un texto aqui" onkeypress="return check(event)"></textarea>
+            <div>
+                <h6 class="informacion">&#9888; Solo letras minúsculas y sin acentos.</h6>
+            </div>
+
+            <div class="botones">
+                <button class="btn-encriptar boton" onclick="btnEncriptar()">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+                          </svg>
+                    </div>
+                    <span>Encriptar</span>
+                </button>
+               
+                <button class="btn-desencriptar boton" onclick="btnDesencriptar()">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" fill="currentColor" class="bi bi-unlock" viewBox="0 0 16 16">
+                            <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2zM3 8a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H3z"/>
+                          </svg>
+                    </div>
+                    <span>Desencriptar</span>
+                </button>
+                
+            </div>
+        </section>
+
+        <section class="textarea-derecha">
+            <textarea id="mensaje" class="mensaje cuadrotexto textarea" readonly></textarea>
+                <button id="btnCopiar" class="btn-copiar boton" onclick="copy()">
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-plus" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                          </svg>
+                    </div>
+                    <span>Copiar</span>
+        </section>
+    </main>
+
+    
+    <footer>
+        <div class="redes">
+            <a href="https://github.com/MartinUrtiz"><i class="fa-brands fa-github github"></i></a>
+            <a href="https://www.linkedin.com/in/martin-urtizberea/"><i class="fa-brands fa-linkedin linkedin"></i></a>
+        </div>
+        <p class="texto-pie">Desarrollado por Martin Urtizberea para el programa <strong class="onePag">ONE</strong> G5</p>
+        
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
